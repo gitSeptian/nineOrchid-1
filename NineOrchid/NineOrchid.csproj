@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{396A1D76-C5BD-4B87-8A5E-5B8C56E46385}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NineOrchid</RootNamespace>
+    <AssemblyName>NineOrchid</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <ApplicationInsightsResourceId>/subscriptions/6a662282-fd79-4804-a5f7-7bca1ae9d6f2/resourcegroups/Default-ApplicationInsights-EastUS/providers/microsoft.insights/components/NineOrchid</ApplicationInsightsResourceId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.0.0.4220, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.Extensibility.DependencyCollector, Version=1.0.0.4227, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.0.0\lib\net45\Microsoft.ApplicationInsights.Extensibility.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.Extensibility.PerfCounterCollector, Version=1.0.0.4231, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.0.0\lib\net45\Microsoft.ApplicationInsights.Extensibility.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.Extensibility.Web, Version=1.0.0.4227, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.0.0\lib\net45\Microsoft.ApplicationInsights.Extensibility.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.Web.TelemetryChannel, Version=1.0.0.4227, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.TelemetryChannel.1.0.0\lib\net45\Microsoft.ApplicationInsights.Web.TelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Diagnostics.Instrumentation.Extensions.Intercept, Version=0.17.0.194, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.0.17.0\lib\net45\Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config" />
+    <Content Include="Pages\Project\Asset\delete.png" />
+    <Content Include="Pages\Project\Asset\update.png" />
+    <Content Include="Pages\Project\BookingKamar.aspx" />
+    <Content Include="Pages\Project\CheckinKamar.aspx" />
+    <Content Include="Pages\Project\CheckoutKamar.aspx" />
+    <Content Include="Pages\Project\DeleteFile.aspx" />
+    <Content Include="Pages\Project\DetailPenghuni.aspx" />
+    <Content Include="Pages\Project\MasterGedung.aspx" />
+    <Content Include="Pages\Project\MasterKamar.aspx" />
+    <Content Include="Pages\Project\MasterPenghuni.aspx" />
+    <Content Include="Pages\Project\MasterPerusahaan.aspx" />
+    <Content Include="Pages\Project\Pembayaran.aspx" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\AdminLTE.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\AdminLTE.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\alt\AdminLTE-bootstrap-social.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\alt\AdminLTE-bootstrap-social.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\alt\AdminLTE-fullcalendar.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\alt\AdminLTE-fullcalendar.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\alt\AdminLTE-select2.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\alt\AdminLTE-select2.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\alt\AdminLTE-without-plugins.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\alt\AdminLTE-without-plugins.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-black-light.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-black-light.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-black.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-black.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-blue-light.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-blue-light.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-blue.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-blue.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-green-light.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-green-light.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-green.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-green.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-purple-light.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-purple-light.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-purple.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-purple.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-red-light.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-red-light.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-red.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-red.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-yellow-light.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-yellow-light.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-yellow.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\skin-yellow.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\_all-skins.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\skins\_all-skins.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\avatar.png" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\avatar04.png" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\avatar2.png" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\avatar3.png" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\avatar5.png" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\credit\american-express.png" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\credit\cirrus.png" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\credit\mastercard.png" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\credit\mestro.png" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\credit\paypal.png" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\credit\paypal2.png" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\credit\visa.png" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\default-50x50.gif" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\icons.png" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\photo1.png" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\photo2.png" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\photo3.jpg" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\photo4.jpg" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\user1-128x128.jpg" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\user2-160x160.jpg" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\user3-128x128.jpg" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\user4-128x128.jpg" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\user5-128x128.jpg" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\user6-128x128.jpg" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\user7-128x128.jpg" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\img\user8-128x128.jpg" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\js\adminlte.js" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\js\adminlte.min.js" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\js\demo.js" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\js\pages\dashboard.js" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\js\pages\dashboard2.js" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\font-awesome\css\font-awesome.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\Ionicons\css\ionicons.css" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\Ionicons\css\ionicons.min.css" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\css\bootstrap-datepicker.css" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\css\bootstrap-iso.css" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\css\bootstrap-toogle.css" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\css\dataTables.min.css" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\js\bootstrap-datepicker.js" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\js\bootstrap-toogle.js" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\js\dataTables.bootstrap.js" />
+    <Content Include="Pages\Project\Plugins\Custom\css\style.css" />
+    <Content Include="Pages\Project\Plugins\Custom\js\prefixfree.min.js" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\js\dhtmlx.js" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxacc_web\dhxacc_btns.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxacc_web\dhxacc_cell_progress.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxcalendar_web\dhxcalendar_arrow_left.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxcalendar_web\dhxcalendar_arrow_left2.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxcalendar_web\dhxcalendar_arrow_right.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxcalendar_web\dhxcalendar_arrow_right2.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxcalendar_web\dhxcalendar_clock.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxcalendar_web\dhxcalendar_mark.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxcalendar_web\dhxcalendar_selector_bottom.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxcalendar_web\dhxcalendar_selector_top.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxcarousel_web\dhxcarousel_cell_progress.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxcombo_web\dhxcombo_arrow_down.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxcombo_web\dhxcombo_arrow_down_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxcombo_web\dhxcombo_chbx.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxcp_web\dhxcp_colors.png" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxdataview_web\dnd_selector.png" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxdataview_web\dnd_selector_cells.png" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxdataview_web\dnd_selector_lines.png" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxdataview_web\marker.png" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\align_center.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\align_justify.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\align_left.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\align_right.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\bold.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\buttons.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\clear.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\h1.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\h2.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\h3.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\h4.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\indent_dec.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\indent_inc.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\italic.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\list_bullet.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\list_number.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\script_sub.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\script_super.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\strike.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxeditor_web\underline.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxform_web\dhxform_chbxrd.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxform_web\dhxform_image_uploading.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxform_web\dhxform_upload_buttons.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxform_web\dhxform_upload_uploading.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\ar_left.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\ar_left_abs.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\ar_left_abs_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\ar_left_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\ar_right.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\ar_right_abs.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\ar_right_abs_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\ar_right_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\blank.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\combo_select_dhx_web.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\dyn_.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\dyn_down.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\dyn_up.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\imageloaderror.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\item_chk0.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\item_chk0_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\item_chk1.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\item_chk1_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\minus.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\paging_page.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\paging_pages.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\paging_rows.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\plus.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\radio_chk0.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\radio_chk0_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\radio_chk1.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\radio_chk1_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\separator.png" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\sort_asc.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\sort_desc.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\blank.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\folder.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\leaf.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\line.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\line1.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\line2.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\line3.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\line4.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\minus.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\minus1.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\minus2.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\minus3.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\minus4.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\minus5.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\plus.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\plus1.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\plus2.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\plus3.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\plus4.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxgrid_web\tree\plus5.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxlayout_web\dhxlayout_cell_btns.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxlayout_web\dhxlayout_cell_progress.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxlayout_web\dhxlayout_sep_h.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxlayout_web\dhxlayout_sep_v.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxmenu_web\dhxmenu_arrow_down.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxmenu_web\dhxmenu_arrow_down_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxmenu_web\dhxmenu_arrow_up.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxmenu_web\dhxmenu_arrow_up_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxmenu_web\dhxmenu_chrd.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxmenu_web\dhxmenu_loader.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxmenu_web\dhxmenu_subar.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxpopup_web\dhxpopup_arrow_bottom.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxpopup_web\dhxpopup_arrow_left.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxpopup_web\dhxpopup_arrow_right.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxpopup_web\dhxpopup_arrow_top.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxribbon_web\dhxribbon_arrow.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxribbon_web\dhxribbon_checked.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxribbon_web\dhxribbon_checked_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxsidebar_web\dhxsidebar_arrow_down.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxsidebar_web\dhxsidebar_arrow_up.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxsidebar_web\dhxsidebar_cell_progress.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxsidebar_web\dhxsidebar_side_icon.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtabbar_web\dhxtabbar_arrows.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtabbar_web\dhxtabbar_button_close.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtabbar_web\dhxtabbar_cell_progress.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\copy.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\copy_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\cut.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\cut_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\database.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\debug.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\debug_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\dhxtoolbar_arrow.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\dhxtoolbar_arrow_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\large.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\medium.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\new.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\new_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\open.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\open_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\other.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\page.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\page_range.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\paste.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\paste_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\presentation.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\print.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\print_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\redo.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\redo_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\save.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\save_as.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\save_as_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\save_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\selection.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\settings.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\small.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\stylesheet.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\text_document.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\undo.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtoolbar_web\undo_dis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtreeview_web\icon_chbx_0.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtreeview_web\icon_chbx_1.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtreeview_web\icon_chbx_dis_0.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtreeview_web\icon_chbx_dis_1.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtreeview_web\icon_file.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtreeview_web\icon_folder_closed.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtreeview_web\icon_folder_opened.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtreeview_web\icon_minus.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtreeview_web\icon_plus.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtreeview_web\loading.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\blank.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\but_cut.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\folderClosed.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\folderOpen.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\iconCheckAll.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\iconCheckDis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\iconCheckGray.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\iconUncheckAll.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\iconUncheckDis.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\leaf.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\line.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\line1.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\line1_rtl.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\line2.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\line2_rtl.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\line3.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\line3_rtl.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\line4.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\line4_rtl.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\lock.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\minus.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\minus1.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\minus2.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\minus2_rtl.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\minus3.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\minus3_rtl.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\minus4.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\minus4_rtl.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\minus5.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\minus5_rtl.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\plus.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\plus1.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\plus2.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\plus2_rtl.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\plus3.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\plus3_rtl.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\plus4.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\plus4_rtl.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\plus5.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\plus5_rtl.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\radio_off.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxtree_web\radio_on.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxwins_web\dhxwins_buttons.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxwins_web\dhxwins_icon.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxwins_web\dhxwins_progress.gif" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\js\json2xml.js" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\js\xml2json.js" />
+    <Content Include="Pages\Project\Plugins\jquery\dist\core.js" />
+    <Content Include="Pages\Project\Plugins\jquery\dist\jquery-ui.js" />
+    <Content Include="Pages\Project\Plugins\jquery\dist\jquery.js" />
+    <Content Include="Pages\Project\Plugins\jquery\dist\jquery.min.js" />
+    <Content Include="Pages\Project\Plugins\jquery\dist\jquery.slim.js" />
+    <Content Include="Pages\Project\Plugins\jquery\dist\jquery.slim.min.js" />
+    <Content Include="Pages\Project\Plugins\DHTMLX\css\dhtmlx.css" />
+    <Content Include="Pages\Project\Plugins\w2-ui\w2ui-1.5.rc1.css" />
+    <Content Include="Pages\Project\Plugins\w2-ui\w2ui-1.5.rc1.js" />
+    <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <Content Include="NineOrchid.Master" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\adminlte.css.map" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\css\adminlte.min.css.map" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="Pages\Project\Plugins\Bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Pages\Project\Plugins\jquery\dist\jquery.min.map" />
+    <Content Include="Pages\Project\Plugins\jquery\dist\jquery.slim.min.map" />
+    <Content Include="Pages\Project\Plugins\AdminLTE\dist\js\jquery.dataTables.min.js" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Pages\Auth\Login.aspx" />
+    <Content Include="Pages\Project\Home.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="NineOrchid.Master.cs">
+      <DependentUpon>NineOrchid.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NineOrchid.Master.designer.cs">
+      <DependentUpon>NineOrchid.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Auth\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Auth\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Project\BookingKamar.aspx.cs">
+      <DependentUpon>BookingKamar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Project\BookingKamar.aspx.designer.cs">
+      <DependentUpon>BookingKamar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Project\CheckinKamar.aspx.cs">
+      <DependentUpon>CheckinKamar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Project\CheckinKamar.aspx.designer.cs">
+      <DependentUpon>CheckinKamar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Project\CheckoutKamar.aspx.cs">
+      <DependentUpon>CheckoutKamar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Project\CheckoutKamar.aspx.designer.cs">
+      <DependentUpon>CheckoutKamar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Project\DeleteFile.aspx.cs">
+      <DependentUpon>DeleteFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Project\DeleteFile.aspx.designer.cs">
+      <DependentUpon>DeleteFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Project\DetailPenghuni.aspx.cs">
+      <DependentUpon>DetailPenghuni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Project\DetailPenghuni.aspx.designer.cs">
+      <DependentUpon>DetailPenghuni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Project\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Project\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Project\MasterGedung.aspx.cs">
+      <DependentUpon>MasterGedung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Project\MasterGedung.aspx.designer.cs">
+      <DependentUpon>MasterGedung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Project\MasterKamar.aspx.cs">
+      <DependentUpon>MasterKamar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Project\MasterKamar.aspx.designer.cs">
+      <DependentUpon>MasterKamar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Project\MasterPenghuni.aspx.cs">
+      <DependentUpon>MasterPenghuni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Project\MasterPenghuni.aspx.designer.cs">
+      <DependentUpon>MasterPenghuni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Project\MasterPerusahaan.aspx.cs">
+      <DependentUpon>MasterPerusahaan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Project\MasterPerusahaan.aspx.designer.cs">
+      <DependentUpon>MasterPerusahaan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Project\Pembayaran.aspx.cs">
+      <DependentUpon>Pembayaran.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Project\Pembayaran.aspx.designer.cs">
+      <DependentUpon>Pembayaran.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NineOrchidBLL\NineOrchidBLL.csproj">
+      <Project>{6dbadb75-9e9f-4d02-8003-30157371ed70}</Project>
+      <Name>NineOrchidBLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>11785</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:11785/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <servers defaultServer="SelfHostServer">
+            <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:11785/" workingDir="" />
+          </servers>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ApplicationInsights.Agent.Intercept.0.17.0\build\Microsoft.ApplicationInsights.Agent.Intercept.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ApplicationInsights.Agent.Intercept.0.17.0\build\Microsoft.ApplicationInsights.Agent.Intercept.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.ApplicationInsights.Agent.Intercept.0.17.0\build\Microsoft.ApplicationInsights.Agent.Intercept.targets" Condition="Exists('..\packages\Microsoft.ApplicationInsights.Agent.Intercept.0.17.0\build\Microsoft.ApplicationInsights.Agent.Intercept.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
