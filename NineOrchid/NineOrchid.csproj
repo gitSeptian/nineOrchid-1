@@ -200,6 +200,9 @@
     <Content Include="Pages\Project\Plugins\Bootstrap\dist\js\dataTables.bootstrap.js" />
     <Content Include="Pages\Project\Plugins\Custom\css\style.css" />
     <Content Include="Pages\Project\Plugins\Custom\js\prefixfree.min.js" />
+    <Content Include="Pages\Project\Plugins\DataTables\datatables.css" />
+    <Content Include="Pages\Project\Plugins\DataTables\datatables.js" />
+    <Content Include="Pages\Project\Plugins\DataTables\jquery.dataTables.min.js" />
     <Content Include="Pages\Project\Plugins\DHTMLX\js\dhtmlx.js" />
     <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxacc_web\dhxacc_btns.gif" />
     <Content Include="Pages\Project\Plugins\DHTMLX\imgs\dhxacc_web\dhxacc_cell_progress.gif" />
@@ -419,6 +422,7 @@
     <Content Include="Pages\Project\Plugins\jquery\dist\jquery.slim.js" />
     <Content Include="Pages\Project\Plugins\jquery\dist\jquery.slim.min.js" />
     <Content Include="Pages\Project\Plugins\DHTMLX\css\dhtmlx.css" />
+    <Content Include="Pages\Project\Plugins\userImage.png" />
     <Content Include="Pages\Project\Plugins\w2-ui\w2ui-1.5.rc1.css" />
     <Content Include="Pages\Project\Plugins\w2-ui\w2ui-1.5.rc1.js" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />

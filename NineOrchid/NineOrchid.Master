@@ -27,12 +27,15 @@
   <link href="../Project/Plugins/Bootstrap/dist/css/bootstrap-iso.css" rel="stylesheet" />
   <link href="../Project/Plugins/Bootstrap/dist/css/bootstrap-datepicker.css" rel="stylesheet" />
   <link href="../Project/Plugins/Bootstrap/dist/css/bootstrap-toogle.css" rel="stylesheet" />
+    <link href="../Project/Plugins/AdminLTE/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="../Project/Plugins/DataTables/datatables.css" rel="stylesheet" />
 
     <script src="../Project/Plugins/jquery/dist/jquery.min.js"></script>
     <script src="../Project/Plugins/jquery/dist/jquery-ui.js"></script>
     <script>$.widget.bridge('uibutton', $.ui.button);</script>
     <script src="../Project/Plugins/AdminLTE/dist/js/adminlte.js"></script>
     <script = src="../Project/Plugins/Bootstrap/dist/js/bootstrap.js"></script>
+
     <script src="../Project/Plugins/AdminLTE/dist/js/jquery.dataTables.min.js"></script>
     <script src="../Project/Plugins/Bootstrap/dist/js/dataTables.bootstrap.js"></script>
     <script src="../Project/Plugins/w2-ui/w2ui-1.5.rc1.js"></script>
@@ -41,10 +44,9 @@
     <script src="../Project/Plugins/DHTMLX/js/xml2json.js"></script>
     <script src="../Project/Plugins/Bootstrap/dist/js/bootstrap-datepicker.js"></script>
     <script src="../Project/Plugins/Bootstrap/dist/js/bootstrap-toogle.js"></script>
+ 
     <script>
         $(document).ready(function () {
-
-
             $('#ContentItem_gvGedung').DataTable();
             var date_input = $('input[ID="date"]'); //our date input has the name "date"
             var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
@@ -68,6 +70,9 @@
      <style>
          .Content-custom-wrapper {
              padding: 20px 300px 1px 35px;
+         }
+         .grid-wrapper {
+            padding : 20px 0px 1px 35px;
          }
          .clonedInput {
          box-shadow: 0px -2px 2px rgba(34,34,34,0.6);

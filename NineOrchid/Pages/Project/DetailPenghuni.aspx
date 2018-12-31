@@ -65,9 +65,9 @@
                             <asp:Label ID="labelPekerjaan" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Foto Penghuni</td>
+                        <td>:</td>
+                        <td><asp:Image ID="image" runat="server" AlternateText="No Upload File Found" Width="400px" Height="300px"/></></td>
                     </tr>
                     <tr>
                         <td><strong>Emergency Contact</strong></td>

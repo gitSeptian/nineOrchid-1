@@ -88,6 +88,8 @@ namespace NineOrchid.Pages.Project
         }
         protected void InsertData()
         {
+            var imagePenghuni = ImageUpload(FileUploadPenghuni);
+            var imageIdcard = ImageUpload(FileUpladId);
             SortedList sl = new SortedList();
             try
             {
@@ -105,6 +107,9 @@ namespace NineOrchid.Pages.Project
                 sl.Add("@almt_perusahaan-VARCHAR-200", AlamatPerusahaan.Text);
                 sl.Add("@kota_perusahaan-VARCHAR-20", kotaperusahaan.Text);
                 sl.Add("@telp_perusahaan-VARCHAR-20", telpPerusahaan.Text);
+                sl.Add("@foto_penghuni-image", imagePenghuni);
+                sl.Add("@foto_ktp-image", imageIdcard);
+
 
                 if (ddlPerusahaan.Enabled == true)
                 {
@@ -166,5 +171,20 @@ namespace NineOrchid.Pages.Project
             string content = JsonConvert.SerializeXmlNode(doc);
             GridContent = content;
         }
+        public byte[] ImageUpload(FileUpload imageContent)
+        {
+            if (imageContent.HasFile)
+            {
+                int imagefileLen = imageContent.PostedFile.ContentLength;
+                byte[] imgarray = new byte[imagefileLen];
+                HttpPostedFile image = imageContent.PostedFile;
+                image.InputStream.Read(imgarray, 0, imagefileLen);
+                return imgarray;
+
+            }
+            return null;
+        }
+
+
     }
 }

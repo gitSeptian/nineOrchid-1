@@ -79,13 +79,13 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Upload Foto Penghuni</label><br />
-                    <asp:FileUpload ID="FileUploadControl" runat="server" />
+                    <asp:FileUpload ID="FileUploadPenghuni" runat="server" />
                     <asp:Button runat="server" ID="UploadFotoPenghuni" Text="Upload" />
                     <%--<asp:Label runat="server" ID="StatusLabel" Text="Upload status: " />--%>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Upload Foto ID</label><br />
-                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                    <asp:FileUpload ID="FileUpladId" runat="server" />
                     <asp:Button runat="server" ID="UploadFotoIDCard" Text="Upload" />
                     <%--<asp:Label runat="server" ID="StatusLabel" Text="Upload status: " />--%>
                 </div>

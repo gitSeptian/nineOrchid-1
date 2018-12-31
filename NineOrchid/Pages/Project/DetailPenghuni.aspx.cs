@@ -30,11 +30,30 @@ namespace NineOrchid.Pages.Project
         }
         public void GetDataPenghuni()
         {
+
             string id = Request.QueryString["ID"];
             DataTable dt = new DataTable("data");
             SortedList sl = new SortedList();
+    
             sl.Add("@idxPenghuni-INT", id);
             dt = penghuniBLL.GetContent(sl);
+            var a = dt.Rows[0]["foto_penghuni"].ToString();
+            if (!string.IsNullOrEmpty(a))
+            {
+                byte[] data = (byte[])dt.Rows[0]["foto_penghuni"];
+                image.ImageUrl = "data:image;base64," + Convert.ToBase64String(data);
+            }
+            else
+            {
+                string root = Server.MapPath("~");
+                string path = Path.GetDirectoryName(root);
+                string path1 = Path.GetDirectoryName(path);
+                string rootfolder = Path.GetDirectoryName(path1);
+                string imagepath = rootfolder + "\\" + "Plugins" + "\\";
+                var b = Path.Combine(imagepath, "userImage.png");
+                image.ImageUrl = b;
+            }
+            
             labelNama.Text = dt.Rows[0]["nm_penghuni"].ToString();
             labelTTL.Text = dt.Rows[0]["TTL"].ToString();
             labelAlamat.Text = dt.Rows[0]["almt_asal"].ToString();
@@ -43,6 +62,7 @@ namespace NineOrchid.Pages.Project
             labelnoHP.Text = dt.Rows[0]["no_hp"].ToString();
             labelEmail.Text = dt.Rows[0]["email"].ToString();
             labelPekerjaan.Text = dt.Rows[0]["pekerjaan"].ToString();
+          
 
         }
         public void GetDataEmergency()

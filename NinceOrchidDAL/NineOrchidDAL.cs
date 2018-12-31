@@ -56,6 +56,10 @@ namespace NinceOrchidDAL
                     {
                         cmn.Parameters.Add(temp[0].ToString(), SqlDbType.VarBinary).Value = entry.Value;
                     }
+                    else if (temp[1].ToLower() == "image")
+                    {
+                        cmn.Parameters.Add(temp[0].ToString(), SqlDbType.Image).Value = entry.Value;
+                    }
                 }
                 cmn.ExecuteNonQuery();
             }

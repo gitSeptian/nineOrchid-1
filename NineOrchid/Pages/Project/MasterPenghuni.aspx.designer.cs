@@ -121,13 +121,13 @@ namespace NineOrchid.Pages.Project {
         protected global::System.Web.UI.WebControls.TextBox pekerjaan;
         
         /// <summary>
-        /// FileUploadControl control.
+        /// FileUploadPenghuni control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUploadControl;
+        protected global::System.Web.UI.WebControls.FileUpload FileUploadPenghuni;
         
         /// <summary>
         /// UploadFotoPenghuni control.
@@ -139,13 +139,13 @@ namespace NineOrchid.Pages.Project {
         protected global::System.Web.UI.WebControls.Button UploadFotoPenghuni;
         
         /// <summary>
-        /// FileUpload1 control.
+        /// FileUpladId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.FileUpload FileUpladId;
         
         /// <summary>
         /// UploadFotoIDCard control.
