@@ -13,6 +13,15 @@ namespace NineOrchid.Pages.Project {
     public partial class MasterPenghuni {
         
         /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Label1;
+        
+        /// <summary>
         /// panelInfo control.
         /// </summary>
         /// <remarks>
@@ -130,15 +139,6 @@ namespace NineOrchid.Pages.Project {
         protected global::System.Web.UI.WebControls.FileUpload FileUploadPenghuni;
         
         /// <summary>
-        /// UploadFotoPenghuni control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UploadFotoPenghuni;
-        
-        /// <summary>
         /// FileUpladId control.
         /// </summary>
         /// <remarks>
@@ -146,15 +146,6 @@ namespace NineOrchid.Pages.Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FileUpladId;
-        
-        /// <summary>
-        /// UploadFotoIDCard control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UploadFotoIDCard;
         
         /// <summary>
         /// checkPerusahaan control.
@@ -211,21 +202,12 @@ namespace NineOrchid.Pages.Project {
         protected global::System.Web.UI.WebControls.TextBox AlamatPerusahaan;
         
         /// <summary>
-        /// btnSubmit control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
-        
-        /// <summary>
-        /// JsonContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl JsonContent;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

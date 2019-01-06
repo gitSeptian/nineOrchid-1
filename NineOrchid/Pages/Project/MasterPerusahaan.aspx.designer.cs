@@ -13,22 +13,13 @@ namespace NineOrchid.Pages.Project {
     public partial class MasterPerusahaan {
         
         /// <summary>
-        /// panelInfo control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelInfo;
-        
-        /// <summary>
-        /// infolbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label infolbl;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Label1;
         
         /// <summary>
         /// nmperusahaan control.
@@ -67,21 +58,12 @@ namespace NineOrchid.Pages.Project {
         protected global::System.Web.UI.WebControls.TextBox telp_perusahaan;
         
         /// <summary>
-        /// btnSubmit control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
-        
-        /// <summary>
-        /// JsonContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl JsonContent;
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }

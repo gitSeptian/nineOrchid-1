@@ -40,7 +40,7 @@
                             <asp:Label ID="labelAgama" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
-                        <td>NO ID Card</td>
+                        <td>No ID Card</td>
                         <td>: </td>
                         <td>
                             <asp:Label ID="labelid" runat="server"></asp:Label></td>
@@ -67,7 +67,7 @@
                     <tr>
                         <td>Foto Penghuni</td>
                         <td>:</td>
-                        <td><asp:Image ID="image" runat="server" AlternateText="No Upload File Found" Width="400px" Height="300px"/></></td>
+                        <td><asp:Image ID="image" runat="server" AlternateText="No Upload File Found" Width="200px" Height="150px"/></></td>
                     </tr>
                     <tr>
                         <td><strong>Emergency Contact</strong></td>
@@ -79,7 +79,14 @@
 
 
                 </table>
-                <div id="gridbox" style="width: 100%; height: 100px; background-color: white;" onchange="onUpdate();"></div>
+                 <table id="myTable" class="table table-responsive table-bordered table-striped">
+
+                            <thead class="panel panel-default">
+                            </thead>
+
+                            <tbody class="">
+                            </tbody>
+                        </table>
                 <label id="Content" style="display: none"><%: GridContent %></label>
                 <label id="JsonContent" style="display: none" runat="server"></label>
             </div>
@@ -90,9 +97,9 @@
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h6>Data Kerabat</h6>
+                       
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-
+                        <h4 class="modal-title">Add New Kontak</h4>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
@@ -142,50 +149,28 @@
                 content = [insert];
             }
 
-            //membuat menu
-            myMenu = new dhtmlXMenuObject({
-                icons_path: "../Project/Asset/",
-                context: true,
-                items: [
-                    //{id :"update", text:"Update", img:"update.png"},
-                    { id: "delete", text: "Delete", img: "delete.png" }
-                ]
-            });
+            $('#myTable').dataTable(
+{
+    data: content,
+    "ordering": false,
+    "info":     false,
+    columns: [
 
-            myMenu.renderAsContextMenu();
-            myMenu.attachEvent("onClick", function () {
-                var selectedRow = myGrid.getSelectedId();
-                var rIndex = myGrid.getRowIndex(selectedRow);
-                var ObjectID = myGrid.cellByIndex(rIndex, 0).getValue();
-                DeleteFile(ObjectID);
-            });
+        { title: "Nama", data: "nm_kerabat" },
+        { title: "Alamat", data: "almt_kerabat" },
+         { title: "Kota", data: "kota_kerabat" },
+          { title: "No Telp", data: "kntk_kerabat" },
+          { title: "Hubungan Saudara", data: "hub_dgn_penghuni" },
+          { title: "", data: "idxKerabat", "className": "text-center", mRender: function (id) { var param = id.toString(); return "<button href='#'  class='btn btn-danger btn-xs' data-title='Delete' onClick=DeleteFile(" + id + ") style='margin-left:5px'><span class='glyphicon glyphicon-remove'></button>"; } }
+    ]
+}
 
-            //membuat Grid
-
-            var gridContent = JSON.stringify(content);
-            myGrid = new dhtmlXGridObject('gridbox');
-            myGrid.setHeader("ID,Nama,Alamat,Kota,No Telp");
-            myGrid.setColumnIds("idxKerabat,nm_kerabat,almt_kerabat,kota_kerabat,kntk_kerabat");
-            myGrid.setInitWidths("*,*,*,*,*");
-            //myGrid.attachHeader("&nbsp,#text_filter,#text_filter,#text_filter;");
-            //myGrid.setSizes("100,100,100,*");
-            myGrid.enableAutoHeight(true);
-            //myGrid.setSkin("Material");
-
-            //myGrid.enableResizing(true,true,true,true,true);
-            //myGrid.setHeight("200);
-            myGrid.setColumnHidden(0, true);
-            myGrid.setColAlign("left,left,left,left,left");
-            myGrid.setColTypes("ro,ed,ed,ed,ed");
-            myGrid.setColSorting("str");
-            myGrid.init();
-            myGrid.parse(content, "js");
-            myGrid.enableContextMenu(myMenu);
+);
         }
         function DeleteFile(ObjectID) {
             w2popup.open({
                 title: 'Delete Folder',
-                body: '<iframe name=myIframeDelete src="DeleteFile.aspx?rowid=' + ObjectID + '&action=3" width="360px" height="50px" frameBorder="0" runat="server"></iframe>',
+                body: '<iframe name=myIframeDelete src="DeleteFile.aspx?rowid=' + ObjectID + '&action=4" width="360px" height="50px" frameBorder="0" runat="server"></iframe>',
                 width: 380,
                 height: 100,
                 overflow: 'hidden',

@@ -1,26 +1,27 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NineOrchid.master.cs" Inherits="NineOrchid.NineOrchid" %>
 
 <!DOCTYPE html>
-   
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-      <meta charset="utf-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <title>Nine Orchid</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
-   <link rel="stylesheet" href="../Project/Plugins/Bootstrap/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="../Project/Plugins/AdminLTE/font-awesome/css/font-awesome.css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Nine Orchid</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     
-  <!-- Theme style -->
-  <link href="../Project/Plugins/AdminLTE/Ionicons/css/ionicons.css" rel="stylesheet" />
+
+    <%--   <link rel="stylesheet" href="../Project/Plugins/Bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="../Project/Plugins/AdminLTE/font-awesome/css/font-awesome.css" />--%>
+    <!-- Theme style -->
+    <%--  <link href="../Project/Plugins/AdminLTE/Ionicons/css/ionicons.css" rel="stylesheet" />
     
-  <link rel="stylesheet" href="../Project/Plugins/AdminLTE/dist/css/AdminLTE.min.css"/>
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
+  <link rel="stylesheet" href="../Project/Plugins/AdminLTE/dist/css/AdminLTE.min.css"/>--%>
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="../Project/Plugins/AdminLTE/dist/css/skins/_all-skins.min.css"/>
-  <!-- Google Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"/>
+    <%--  <link rel="stylesheet" href="../Project/Plugins/AdminLTE/dist/css/skins/_all-skins.min.css"/>--%>
+    <!-- Google Font -->
+    <%--  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"/>
   <link href="../Project/Plugins/Bootstrap/dist/css/dataTables.min.css" rel="stylesheet" />
   <link href="../Project/Plugins/DHTMLX/css/dhtmlx.css" rel="stylesheet" />
   <link href="../Project/Plugins/w2-ui/w2ui-1.5.rc1.css" rel="stylesheet" />
@@ -28,23 +29,57 @@
   <link href="../Project/Plugins/Bootstrap/dist/css/bootstrap-datepicker.css" rel="stylesheet" />
   <link href="../Project/Plugins/Bootstrap/dist/css/bootstrap-toogle.css" rel="stylesheet" />
     <link href="../Project/Plugins/AdminLTE/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="../Project/Plugins/DataTables/datatables.css" rel="stylesheet" />
+    <link href="../Project/Plugins/DataTables/datatables.css" rel="stylesheet" />--%>
 
-    <script src="../Project/Plugins/jquery/dist/jquery.min.js"></script>
-    <script src="../Project/Plugins/jquery/dist/jquery-ui.js"></script>
-    <script>$.widget.bridge('uibutton', $.ui.button);</script>
-    <script src="../Project/Plugins/AdminLTE/dist/js/adminlte.js"></script>
-    <script = src="../Project/Plugins/Bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="/Scripts/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/Scripts/adminlte/dist/js/adminlte.min.js"></script>
+    <script src="/Scripts/DataTables/datatables.min.js"></script>
+    <script src="/Scripts/DataTables/Responsive-2.2.0/js/dataTables.responsive.js"></script>
+    <script src="/Scripts/DataTables/Responsive-2.2.0/js/responsive.bootstrap.min.js"></script>
+    <script src="/Scripts/DataTables/Buttons-1.4.2/js/buttons.bootstrap.min.js"></script>
+    <script src="/Scripts/DataTables/Buttons-1.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="/Scripts/DataTables/Buttons-1.4.2/js/buttons.print.min.js"></script>
+    <script src="/Scripts/DataTables/Buttons-1.4.2/js/buttons.html5.min.js"></script>
+    <script src="/Scripts/DataTables/Buttons-1.4.2/js/jszip.min.js"></script>
+    <script src="/Scripts/DataTables/Buttons-1.4.2/js/pdfmake.min.js"></script>
+    <script src="/Scripts/DataTables/Buttons-1.4.2/js/vfs_fonts.js"></script>
+    <script src="/Scripts/bootstrap/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="/Scripts/select2/dist/js/select2.full.min.js"></script>
 
-    <script src="../Project/Plugins/AdminLTE/dist/js/jquery.dataTables.min.js"></script>
-    <script src="../Project/Plugins/Bootstrap/dist/js/dataTables.bootstrap.js"></script>
+    <%--  <script src="../Project/Plugins/jquery/dist/jquery.min.js"></script>--%>
+    <%--    <script src="../Project/Plugins/jquery/dist/jquery-ui.js"></script>--%>
+<%--    <script>$.widget.bridge('uibutton', $.ui.button);</script>--%>
+    <%--    <script src="../Project/Plugins/AdminLTE/dist/js/adminlte.js"></script>
+    <script = src="../Project/Plugins/Bootstrap/dist/js/bootstrap.js"></script>--%>
+
+    <%--    <script src="../Project/Plugins/AdminLTE/dist/js/jquery.dataTables.min.js"></script>
+    <script src="../Project/Plugins/Bootstrap/dist/js/dataTables.bootstrap.js"></script>--%>
     <script src="../Project/Plugins/w2-ui/w2ui-1.5.rc1.js"></script>
     <script src="../Project/Plugins/DHTMLX/js/dhtmlx.js"></script>
     <script src="../Project/Plugins/DHTMLX/js/json2xml.js"></script>
     <script src="../Project/Plugins/DHTMLX/js/xml2json.js"></script>
-    <script src="../Project/Plugins/Bootstrap/dist/js/bootstrap-datepicker.js"></script>
-    <script src="../Project/Plugins/Bootstrap/dist/js/bootstrap-toogle.js"></script>
- 
+    <%--    <script src="../Project/Plugins/Bootstrap/dist/js/bootstrap-datepicker.js"></script>
+    <script src="../Project/Plugins/Bootstrap/dist/js/bootstrap-toogle.js"></script>--%>
+
+    <link href="/Scripts/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Scripts/font-awesome/css/all.min.css" rel="stylesheet" />
+    <link href="/Scripts/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="/Scripts/Ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="/Scripts/adminlte/dist/css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="/Scripts/adminlte/dist/css/skins/_all-skins.css" rel="stylesheet" />
+    <link href="/Scripts/DataTables/datatables.css" rel="stylesheet" />
+    <link href="/Scripts/DataTables/DataTables-1.10.16/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="/Scripts/bootstrap/dist/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="/Scripts/DataTables/Responsive-2.2.0/css/responsive.bootstrap.min.css" rel="stylesheet" />
+    <link href="/Scripts/DataTables/Responsive-2.2.0/css/responsive.dataTables.min.css" rel="stylesheet" />
+    <link href="/Scripts/DataTables/Buttons-1.4.2/css/buttons.bootstrap.min.css" rel="stylesheet" />
+    <link href="/Scripts/DataTables/Buttons-1.4.2/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <link href="/Scripts/select2/dist/css/select2.min.css" rel="stylesheet" />
+      <link href="../Project/Plugins/w2-ui/w2ui-1.5.rc1.css" rel="stylesheet" />
+
+
+
     <script>
         $(document).ready(function () {
             $('#ContentItem_gvGedung').DataTable();
@@ -67,350 +102,347 @@
 
 
     </script>
-     <style>
-         .Content-custom-wrapper {
-             padding: 20px 300px 1px 35px;
-         }
-         .grid-wrapper {
-            padding : 20px 0px 1px 35px;
-         }
-         .clonedInput {
-         box-shadow: 0px -2px 2px rgba(34,34,34,0.6);
-         padding : 10px;
-         }
-     </style>
+    <style>
+        .Content-custom-wrapper {
+            padding: 20px 300px 1px 35px;
+        }
+
+        .grid-wrapper {
+            padding: 20px 0px 1px 35px;
+        }
+
+        .clonedInput {
+            box-shadow: 0px -2px 2px rgba(34,34,34,0.6);
+            padding: 10px;
+        }
+    </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini" onload="doOnload();">
-<div class="wrapper">
+    <div class="wrapper">
 
-  <header class="main-header">
-    <!-- Logo -->
-    <a href="index2.html" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>O</b>RC</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Nine</b>Orchid</span>
-    </a>
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" style="padding:0px !important">
-        <span class="sr-only">Toggle navigation</span>
-      </a>
-
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
-          <!-- Notifications: style can be found in dropdown.less -->
-          
-          <!-- Tasks: style can be found in dropdown.less -->
-        
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../Project/Plugins/AdminLTE/dist/img/user2-160x160.jpg" class="user-image" alt="User Image" />
-              <span class="hidden-xs">Eman Kun</span>
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="index2.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>O</b>RC</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Nine</b>Orchid</span>
             </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="../Project/Plugins/AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" style="padding: 0px !important">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
 
-                <p>
-<%--                  Alexander Pierce - Web Developer
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                        <!-- Notifications: style can be found in dropdown.less -->
+
+                        <!-- Tasks: style can be found in dropdown.less -->
+
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="../Project/Plugins/AdminLTE/dist/img/user2-160x160.jpg" class="user-image" alt="User Image" />
+                                <span class="hidden-xs">Eman Kun</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+                                    <img src="../Project/Plugins/AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+
+                                    <p>
+                                        <%--                  Alexander Pierce - Web Developer
                   <small>Member since Nov. 2012</small>--%>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    </p>
+                                </li>
+                                <!-- Menu Body -->
+                                <li class="user-body">
+
+                                    <!-- /.row -->
+                                </li>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="../Auth/login.aspx" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
                 </div>
-                <div class="pull-right">
-                  <a href="../Auth/login.aspx" class="btn btn-default btn-flat">Sign out</a>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <%--<!-- Sidebar user panel -->--%>
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="../Project/Plugins/AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                    </div>
+                    <div class="pull-left info">
+                        <p>Eman Kun</p>
+                        <a href="#"><i class="fa fa-circle text-success"></i>Online</a>
+                    </div>
                 </div>
-              </li>
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="header">MAIN MENU</li>
+                    <li class="active treeview">
+                        <a href="#">
+                            <i class="fa fa-table"></i><span>Master Data</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="active"><a href="MasterGedung.aspx"><i class="fa fa-circle-o"></i>Master Gedung</a></li>
+                            <li><a href="MasterKamar.aspx"><i class="fa fa-circle-o"></i>Master Kamar</a></li>
+                            <li><a href="MasterPenghuni.aspx"><i class="fa fa-circle-o"></i>Master Penghuni</a></li>
+                            <li><a href="MasterPerusahaan.aspx"><i class="fa fa-circle-o"></i>Master Perusahaan</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="BookingKamar.aspx">
+                            <i class="fa fa-calendar"></i><span>Booking Kamar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="CheckinKamar.aspx">
+                            <i class="fa fa-edit"></i><span>Checkin Kamar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="CheckoutKamar.aspx">
+                            <i class="fa fa-edit"></i><span>Checkout Kamar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Pembayaran.aspx">
+                            <i class="fa fa-ion ion-ios-pricetag-outline"></i><span>Pembayaran</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="min-height:916px;">
+            <asp:ContentPlaceHolder ID="ContentItem" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 1.0
+            </div>
+            <strong>Copyright &copy; 2018</strong> All rights reserved.
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Create the tabs -->
+            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+                <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
             </ul>
-          </li>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- Home tab content -->
+                <div class="tab-pane" id="control-sidebar-home-tab">
+                    <h3 class="control-sidebar-heading">Recent Activity</h3>
+                    <ul class="control-sidebar-menu">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-      <%--<!-- Sidebar user panel -->--%>
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="../Project/Plugins/AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
-        </div>
-        <div class="pull-left info">
-          <p>Eman Kun</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
-      </div>
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MAIN MENU</li>
-        <li class="active treeview">
-          <a href="#">
-            <i class="fa fa-table"></i> <span>Master Data</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active"><a href="MasterGedung.aspx"><i class="fa fa-circle-o"></i>Master Gedung</a></li>
-            <li><a href="MasterKamar.aspx"><i class="fa fa-circle-o"></i>Master Kamar</a></li>
-            <li><a href="MasterPenghuni.aspx"><i class="fa fa-circle-o"></i>Master Penghuni</a></li>
-            <li><a href="MasterPerusahaan.aspx"><i class="fa fa-circle-o"></i>Master Perusahaan</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="BookingKamar.aspx">
-            <i class="fa fa-calendar"></i> <span>Booking Kamar</span>
-          </a>
-        </li>
-        <li>
-          <a href="CheckinKamar.aspx">
-            <i class="fa fa-edit"></i> <span>Checkin Kamar</span>
-          </a>
-        </li>
-        <li>
-          <a href="CheckoutKamar.aspx">
-            <i class="fa fa-edit"></i> <span>Checkout Kamar</span>
-          </a>
-        </li>
-        <li>
-          <a href="Pembayaran.aspx">
-            <i class="fa fa-ion ion-ios-pricetag-outline"></i> <span>Pembayaran</span>
-          </a>
-        </li>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
 
-      </ul>
-    </section>
-    <!-- /.sidebar -->
-  </aside>
+                                    <p>Will be 23 on April 24th</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="menu-icon fa fa-user bg-yellow"></i>
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper" <%--style="padding:20px 300px 1px 35px"--%>>
-     <asp:ContentPlaceHolder ID="ContentItem" runat="server">
-       
-        </asp:ContentPlaceHolder>
-  </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 1.0
-    </div>
-    <strong>Copyright &copy; 2018</strong> All rights reserved.
-  </footer>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Create the tabs -->
-    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <!-- Home tab content -->
-      <div class="tab-pane" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+                                    <p>New phone +1(800)555-1234</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
 
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
 
-                <p>Will be 23 on April 24th</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-user bg-yellow"></i>
+                                    <p>nora@example.com</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="menu-icon fa fa-file-code-o bg-green"></i>
 
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
 
-                <p>New phone +1(800)555-1234</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+                                    <p>Execution time 5 seconds</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.control-sidebar-menu -->
 
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-
-                <p>nora@example.com</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-file-code-o bg-green"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-
-                <p>Execution time 5 seconds</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Custom Template Design
+                    <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                    <ul class="control-sidebar-menu">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <h4 class="control-sidebar-subheading">Custom Template Design
                 <span class="label label-danger pull-right">70%</span>
-              </h4>
+                                </h4>
 
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Update Resume
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <h4 class="control-sidebar-subheading">Update Resume
                 <span class="label label-success pull-right">95%</span>
-              </h4>
+                                </h4>
 
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Laravel Integration
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <h4 class="control-sidebar-subheading">Laravel Integration
                 <span class="label label-warning pull-right">50%</span>
-              </h4>
+                                </h4>
 
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Back End Framework
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <h4 class="control-sidebar-subheading">Back End Framework
                 <span class="label label-primary pull-right">68%</span>
-              </h4>
+                                </h4>
 
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.control-sidebar-menu -->
 
-      </div>
-      <!-- /.tab-pane -->
-      <!-- Stats tab content -->
-      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-      <!-- /.tab-pane -->
-      <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
+                </div>
+                <!-- /.tab-pane -->
+                <!-- Stats tab content -->
+                <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+                <!-- /.tab-pane -->
+                <!-- Settings tab content -->
+                <div class="tab-pane" id="control-sidebar-settings-tab">
+                    <form method="post">
+                        <h3 class="control-sidebar-heading">General Settings</h3>
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Report panel usage
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Report panel usage
               <input type="checkbox" class="pull-right" checked>
-            </label>
+                            </label>
 
-            <p>
-              Some information about this general settings option
-            </p>
-          </div>
-          <!-- /.form-group -->
+                            <p>
+                                Some information about this general settings option
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Allow mail redirect
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Allow mail redirect
               <input type="checkbox" class="pull-right" checked>
-            </label>
+                            </label>
 
-            <p>
-              Other sets of options are available
-            </p>
-          </div>
-          <!-- /.form-group -->
+                            <p>
+                                Other sets of options are available
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Expose author name in posts
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Expose author name in posts
               <input type="checkbox" class="pull-right" checked>
-            </label>
+                            </label>
 
-            <p>
-              Allow the user to show his name in blog posts
-            </p>
-          </div>
-          <!-- /.form-group -->
+                            <p>
+                                Allow the user to show his name in blog posts
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
 
-          <h3 class="control-sidebar-heading">Chat Settings</h3>
+                        <h3 class="control-sidebar-heading">Chat Settings</h3>
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Show me as online
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Show me as online
               <input type="checkbox" class="pull-right" checked>
-            </label>
-          </div>
-          <!-- /.form-group -->
+                            </label>
+                        </div>
+                        <!-- /.form-group -->
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Turn off notifications
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Turn off notifications
               <input type="checkbox" class="pull-right">
-            </label>
-          </div>
-          <!-- /.form-group -->
+                            </label>
+                        </div>
+                        <!-- /.form-group -->
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Delete chat history
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Delete chat history
               <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-            </label>
-          </div>
-          <!-- /.form-group -->
-        </form>
-      </div>
-      <!-- /.tab-pane -->
-    </div>
-  </aside>
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
+                            </label>
+                        </div>
+                        <!-- /.form-group -->
+                    </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+        </aside>
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
-</div>
-<!-- ./wrapper -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
 
 
 </body>

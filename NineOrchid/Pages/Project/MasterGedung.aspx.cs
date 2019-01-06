@@ -35,17 +35,17 @@ namespace NineOrchid.Pages.Project
             }
             catch (Exception ex)
             {
-                infolbl.Text = ex.ToString();
-                panelInfo.CssClass = "alert alert-danger";
-                throw;
+                //infolbl.Text = ex.ToString();
+                //panelInfo.CssClass = "alert alert-danger";
+                throw ex;
             }
            
            
         }
         protected void SuccessAction()
         {
-            panelInfo.Visible = true;
-            infolbl.Text = "success melakukan update data!";
+           // panelInfo.Visible = true;
+            //infolbl.Text = "success melakukan update data!";
             nmGedung.Text = "";
             jmlLantai.Text = "";
         }

@@ -13,22 +13,13 @@ namespace NineOrchid.Pages.Project {
     public partial class MasterGedung {
         
         /// <summary>
-        /// panelInfo control.
+        /// JsonContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelInfo;
-        
-        /// <summary>
-        /// infolbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label infolbl;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl JsonContent;
         
         /// <summary>
         /// nmGedung control.
@@ -49,21 +40,12 @@ namespace NineOrchid.Pages.Project {
         protected global::System.Web.UI.WebControls.TextBox jmlLantai;
         
         /// <summary>
-        /// btnSubmit control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
-        
-        /// <summary>
-        /// JsonContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl JsonContent;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

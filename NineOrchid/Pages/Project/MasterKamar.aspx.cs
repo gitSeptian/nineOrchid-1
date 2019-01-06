@@ -40,6 +40,12 @@ namespace NineOrchid.Pages.Project
             try
             {
                 SortedList sl = new SortedList();
+                var foto1 = ImageUpload(FileUpload1);
+                var foto2 = ImageUpload(FileUpload2);
+                var foto3 = ImageUpload(FileUpload3);
+                var foto4 = ImageUpload(FileUpload4);
+                var foto5 = ImageUpload(FileUpload5);
+
                 sl.Add("@idxGedung-INT", DdlGedungList.SelectedValue);
                 sl.Add("@no_kamar-VARCHAR-3", no_kamar.Text);
                 sl.Add("@lantai_kmr-VARCHAR-3", lantai_kmr.Text);
@@ -51,6 +57,11 @@ namespace NineOrchid.Pages.Project
                 sl.Add("@trf_bulanan-VARCHAR-50", trf_bulanan.Text);
                 sl.Add("@trf_tiga_bulanan-VARCHAR-50", trf_tiga_bulanan.Text);
                 sl.Add("@ket-VARCHAR-50", ket.Text);
+                sl.Add("@foto1-image", foto1);
+                sl.Add("@foto2-image", foto2);
+                sl.Add("@foto3-image", foto3);
+                sl.Add("@foto4-image", foto4);
+                sl.Add("@foto5-image", foto5);
 
                 bll.Insert(sl);
                 SuccessAction();
@@ -60,11 +71,30 @@ namespace NineOrchid.Pages.Project
                 infolbl.Text = ex.ToString();
                 panelInfo.CssClass = "alert alert-danger";
                 throw;
-      
+
             }
-           
-            
+
+
         }
+        protected SortedList Image()
+        {
+            FileUpload[] arrayFile = { FileUpload1, FileUpload2, FileUpload3, FileUpload4, FileUpload5, };
+            SortedList fileBunch = new SortedList();
+            int index = 0;
+            int indexImage = 0;
+            foreach (var item in arrayFile)
+            {
+                if (arrayFile[index].HasFile)
+                {
+                    fileBunch.Add(indexImage, ImageUpload(arrayFile[index]));
+                    indexImage++;
+                }
+                index++;
+            }
+
+            return fileBunch;
+        }
+
         protected void getddlGedung()
         {
             SortedList sl = new SortedList();
@@ -78,7 +108,7 @@ namespace NineOrchid.Pages.Project
         }
         protected void SuccessAction()
         {
-            
+
             panelInfo.Visible = true;
             infolbl.Text = "success melakukan update data!";
             clearForm();
@@ -110,6 +140,19 @@ namespace NineOrchid.Pages.Project
             doc.LoadXml(hasil);
             string content = JsonConvert.SerializeXmlNode(doc);
             GridContent = content;
+        }
+        public byte[] ImageUpload(FileUpload imageContent)
+        {
+            if (imageContent.HasFile)
+            {
+                int imagefileLen = imageContent.PostedFile.ContentLength;
+                byte[] imgarray = new byte[imagefileLen];
+                HttpPostedFile image = imageContent.PostedFile;
+                image.InputStream.Read(imgarray, 0, imagefileLen);
+                return imgarray;
+
+            }
+            return null;
         }
 
     }

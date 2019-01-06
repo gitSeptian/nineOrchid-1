@@ -36,10 +36,12 @@ namespace NineOrchid.Pages.Project
         }
         public void getData(string action)
         {
+            string ID = Request.QueryString["rowid"];
             if (action == "1")
             {
                 NineOrchidBLL.GedungBLL bll = new NineOrchidBLL.GedungBLL();
                 SortedList sl = new SortedList();
+                sl.Add("@idxGedung-int", ID);
                 DataTable dt = bll.GetContent(sl);
                 string x = dt.Rows[0]["gedung_nm"].ToString();
                 lblFileName.Text = x;
@@ -48,6 +50,7 @@ namespace NineOrchid.Pages.Project
             {
                 NineOrchidBLL.KamarBLL bll = new NineOrchidBLL.KamarBLL();
                 SortedList sl = new SortedList();
+                sl.Add("@idxKamar-varchar-10", ID);
                 DataTable dt = bll.GetContent(sl);
                 string x = dt.Rows[0]["idxKamar"].ToString();
                 lblFileName.Text = x;
@@ -56,9 +59,23 @@ namespace NineOrchid.Pages.Project
             {
                 NineOrchidBLL.PerusahaanBLL bll = new NineOrchidBLL.PerusahaanBLL();
                 SortedList sl = new SortedList();
+                sl.Add("@idxPerusahaan-int", ID);
                 DataTable dt = bll.GetContent(sl);
                 string x = dt.Rows[0]["idxPerusahaan"].ToString();
                 lblFileName.Text = x;
+            }
+            else if (action == "5")
+            {
+                NineOrchidBLL.PenghuniBLL bll = new NineOrchidBLL.PenghuniBLL();
+                SortedList sl = new SortedList();
+                sl.Add("@idxPenghuni-int", ID);
+                DataTable dt = bll.GetContent(sl);
+                string x = dt.Rows[0]["idxPenghuni"].ToString();
+                lblFileName.Text = x;
+            }
+            else
+            {
+                lblFileName.Text = "";
             }
 
         }
@@ -86,6 +103,22 @@ namespace NineOrchid.Pages.Project
                 NineOrchidBLL.PerusahaanBLL bll = new NineOrchidBLL.PerusahaanBLL();
                 SortedList sl = new SortedList();
                 sl.Add("@idxPerusahaan-INT", ID);
+                bll.Delete(sl);
+            }
+            else if (action == "4")
+            {
+                string ID = Request.QueryString["rowid"];
+                NineOrchidBLL.KerabatBLL bll = new NineOrchidBLL.KerabatBLL();
+                SortedList sl = new SortedList();
+                sl.Add("@idxKerabat-INT", ID);
+                bll.Delete(sl);
+            }
+            else if (action == "5")
+            {
+                string ID = Request.QueryString["rowid"];
+                NineOrchidBLL.PenghuniBLL bll = new NineOrchidBLL.PenghuniBLL();
+                SortedList sl = new SortedList();
+                sl.Add("@idxPenghuni-INT", ID);
                 bll.Delete(sl);
             }
 

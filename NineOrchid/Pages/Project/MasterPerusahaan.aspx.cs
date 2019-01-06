@@ -19,7 +19,11 @@ namespace NineOrchid.Pages.Project
         public string GridContent;
         protected void Page_Load(object sender, EventArgs e)
         {
-            GetData();
+            if (!IsPostBack)
+            {
+                GetData();
+            }
+
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
@@ -37,8 +41,8 @@ namespace NineOrchid.Pages.Project
             }
             catch (Exception ex)
             {
-                infolbl.Text = ex.ToString();
-                panelInfo.CssClass = "alert alert-danger";
+                //infolbl.Text = ex.ToString();
+                //panelInfo.CssClass = "alert alert-danger";
                 throw;
             }
 
@@ -46,8 +50,8 @@ namespace NineOrchid.Pages.Project
         }
         protected void SuccessAction()
         {
-            panelInfo.Visible = true;
-            infolbl.Text = "success melakukan update data!";
+            //panelInfo.Visible = true;
+            //infolbl.Text = "success melakukan update data!";
             nmperusahaan.Text = "";
             almt_perusahaan.Text = "";
             kota_perusahaan.Text = "";
